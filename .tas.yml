@@ -10,10 +10,12 @@ preRun:
   # set of commands to run before running the tests like `yarn install`, `yarn build`
   command:
     - npm i
+    - npm run format:check
+    - npm run compile
 
 postMerge:
   pattern:
-    - "./test/*.ts"
+    - "test/**/*.ts"
   # strategy for trigerring builds for post-merge
   strategy:
     threshold: 1
@@ -21,7 +23,7 @@ postMerge:
 
 preMerge:
   pattern:
-    - "./test/*.ts"
+    - "test/**/*.ts"
 
 # configure whether to smartSelect test-cases. Default true
 smartRun: true
