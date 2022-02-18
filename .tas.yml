@@ -29,7 +29,7 @@ preMerge:
 smartRun: true
 
 # supported tiers: xmall|small|medium|large|xlarge
-tier: xsmall
+tier: small
 
 # number of containers in which the tests must be splitted into for execution
 parallelism: 2
